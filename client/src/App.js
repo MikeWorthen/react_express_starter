@@ -12,6 +12,7 @@ import './App.css';
 const App = () => (
   <Router>
     <div>
+    <AppNavbar />
       <Switch>
         <Route exact path="/" component={Search} />
         <Route exact path="/results" component={Results} />

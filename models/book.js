@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const BookSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     date: {
         type: Date,
