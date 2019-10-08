@@ -6,6 +6,7 @@ const books = require('./routes/api/books')
 
 const app = express();
 
+
 // Bodyparser Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -20,6 +21,10 @@ mongoose.connect(db)
 
 // Use Routes
 app.use('/api/books', books)
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+}
 
 const port = process.env.PORT || 5000;
 
