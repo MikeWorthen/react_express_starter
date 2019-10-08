@@ -7,6 +7,7 @@ const books = require('./routes/api/books')
 const app = express();
 
 // Bodyparser Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // DB Config
